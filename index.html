@@ -1,130 +1,75 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Привет =)">
-    <meta name="author" content="Привет =)">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Paradise Game | Gen</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet"> 
-    <link href="css/lightbox.css" rel="stylesheet"> 
-	<link href="css/main.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="dow">
 
-    <!--[if lt IE 9]>
-	    <script src="js/html5shiv.js"></script>
-	    <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <!--link rel="shortcut icon" href="images/ico/favicon.ico"-->
-    
-</head><!--/head-->
+    <meta content="object" property="og:type">
+    <meta content="dow" property="og:site_name">
+    <meta content="dow" property="og:title">
+    <meta content="dow" property="og:description">
+    <meta content="images/logo.png" property="og:image">
+    <meta content="400" property="og:image:width">
+    <meta content="400" property="og:image:height">
+    <meta content="#" property="og:url">
+
+    <link rel="apple-touch-icon" href="images\logo.png">
+    <link rel="shortcut icon" type="image/png" href="images\logo.png">
+    <link rel='icon' href='images\favicon.ico' type='image/png'>
+
+    <!-- Microsoft Tile support -->
+    <meta content="MusicBee" name="application-name">
+    <meta content="#CC6A30" name="msapplication-TileColor">
+
+    <meta property="og:locale" content="en-us">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="styles\main.css">
+    <script src="scripts\fuse.min.js"></script>
+
+</head>
 
 <body>
 
-	<style> img { pointer-events: none; }</style>
 
-    <style>
-body 
+<div class="pagecontent">
+	<div class="pagecontainer">
+		<div id="content" class="mdcontent">
+			<div class="contentspacing">
+				<h1>Paradise Game</h1>
+				<!--p>
+					<a href="" target="_blank"></a>
+				</p-->
+				<div class="info" style="padding-right: 100px; margin-right: 450px;">
+					<p><strong>Хотите протестировать Paradise? Скачайте демо-версию и попробуйте:
+						<a href="https://drive.google.com/uc?id=1ie0oCYMgDgkWNC7H80fCu3eyWLRvDzcT&export=download" 
+						 target="_blank" style="text-decoration: none;">Скачать</a></strong>
+					</p>
+				</div>
 
-{
-background: #c7b39b 
-url(https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/386700/5d79fd6bf5cdf7e8e6d0a53bfb2be174e3291da0.png);
-no-repeat;
-  background-size: 100%;
-}
+				<hr>
+				<h2>Что нового в обновлении v5 ?</h2>
+				<p>Вышло новое обновление с новыми функциями и улучшениями.</p>
+				<ul>
+					<li>Добавлено Меню Пауза.</li>
 
-</style>
-	<header id="header">      
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 overflow">
-                   <div class="social-icons pull-right">
-                    <ul>
-                        <a style="color: white;" href="#":>
-                            Главная
-                        </a>
-                    </ul>
-                    </div> 
-                </div>
-             </div>
-        </div>
+					<li>Также есть много других исправлений и небольшие улучшения качества жизни. </li>
 
-    </header>
-    
-    <!--/#clients-->
+					<li>Для изменения ротации камеры используйте 
+						(Используйте<code lang-rel="CODE"> 1 и 2 </code>)</li>
 
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="testimonial bottom">
-                        <h2>Команда</h2>
-                        <div class="media">
-                            <div class="pull-left">
-                                <a href="https://steamcommunity.com/id/5z9/" target="_blank">
-                                	<img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/03/031a71d32173cdf22355a45fa6f2ae759a6771ac_full.jpg"width="81"height="81">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <blockquote style="color: white;">- Илья</blockquote>
-                                <h3><a href="https://steamcommunity.com/id/5z9/" target="_blank">- Steam</a></h3>
-                            </div>
-                         </div>
-                        <div class="media">
-                            <div class="pull-left">
-                                <a href="https://steamcommunity.com/id/higgs5564" target="_blank">
-                                	<img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/3f/3fd73f0c039b6416340223e8c949be1c20be5ca3_full.jpg"width="81"height="81">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <blockquote style="color: white;">- Леонид</blockquote>
-                                <h3><a href="https://steamcommunity.com/id/higgs5564" target="_blank">- Steam</a></h3>
-                            </div>
-                        </div>   
-                    </div> 
-                </div>
-
-            <div class="col-md-3 col-sm-6">
-                    <div class="contact-info bottom">
-                        <h2>Новости</h2>
-                        <news>
-                        	<i class="fa fa-newspaper-o" aria-hidden="true" style="color: white;">  11.05.2020: </i>
-                        	<a aria-hidden="true" style="color: white;">  Первый тест интеграции 
-                        		<a style="color: blue;">Steam </a>  
-                        </news>
-                    </div>
-                </div>
-
-           <div class="col-md-4 col-sm-12">
-                    <div class="contact-form bottom">
-                            <div class="form-group">
-                <a href="https://drive.google.com/u/0/uc?export=download&confirm=9AJh&id=1ie0oCYMgDgkWNC7H80fCu3eyWLRvDzcT" download>
-                	<input type="submit" name="submit" class="btn btn-submit" value="Скачать: Paradise v 5">
-                </a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="copyright-text text-center" style="color: white;">
-                        <p>&copy; v0.0.1 codename <a style="color: Purple;">GEN</a> © 2020.</p>
-                        <p>Co-creator by <a target="_blank" href="https://vk.com/ezzhii" style="color: red;">ezzhii</a></p>
-                    </div>
-                </div>
-           </div>
-
-        </div>
-		
-	
-    </footer>
-    <!--/#footer-->
-
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/lightbox.min.js"></script>
-    <script type="text/javascript" src="js/wow.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>   
+				</ul>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<div class="content">
+		<p>v0.0.1 codename GEN © 2020.  ezzhii ( Леонид )</p>
+	</div>
+</div>
 </body>
+
 </html>
