@@ -1,80 +1,272 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Paradise Game | Gen</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="dow">
+    <head>
+        <meta charset="UTF-8" />
 
-    <meta content="object" property="og:type">
-    <meta content="dow" property="og:site_name">
-    <meta content="dow" property="og:title">
-    <meta content="dow" property="og:description">
-    <meta content="images/logo.png" property="og:image">
-    <meta content="400" property="og:image:width">
-    <meta content="400" property="og:image:height">
-    <meta content="#" property="og:url">
+        <title>System Core</title>
 
-    <link rel="apple-touch-icon" href="images\logo.png">
-    <link rel="shortcut icon" type="image/png" href="images\logo.png">
-    <link rel='icon' href='images\favicon.ico' type='image/png'>
-
-    <!-- Microsoft Tile support -->
-    <meta content="MusicBee" name="application-name">
-    <meta content="#CC6A30" name="msapplication-TileColor">
-
-    <meta property="og:locale" content="en-us">
-    <meta property="og:type" content="website">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="styles\main.css">
-    <script src="scripts\fuse.min.js"></script>
-
-</head>
-
-<body>
+        <link rel="stylesheet" href="https://static.itch.io/game.css?1590943262" />
 
 
-<div class="pagecontent">
-	<div class="pagecontainer">
-		<div id="content" class="mdcontent">
-			<div class="contentspacing">
-				<h1>Paradise Game</h1>
-				<!--p>
-					<a href="" target="_blank"></a>
-				</p-->
-				<div class="info" style="padding-right: 100px; margin-right: 450px;">
-					<p><strong>Хотите протестировать Paradise? Скачайте демо-версию и попробуйте:
-						<a href="https://drive.google.com/u/0/uc?export=download&confirm=ZqW0&id=1ie0oCYMgDgkWNC7H80fCu3eyWLRvDzcT" 
-						 target="_blank" style="text-decoration: none;">Скачать</a></strong>
-					</p>
-				</div>
+        <style type="text/css" id="game_theme">
+            :root {
+                --itchio_ui_bg: #282828;
+                --itchio_ui_bg_dark: #222222;
+            }
+            .wrapper {
+                --itchio_font_family: sans-serif;
+                --itchio_bg_color: #000000;
+                --itchio_bg2_color: rgba(0, 0, 0, 1);
+                --itchio_bg2_sub: #191919;
+                --itchio_text_color: #ffffff;
+                --itchio_link_color: #009dd1;
+                --itchio_border_color: #262626;
+                --itchio_button_color: #009dd1;
+                --itchio_button_fg_color: white;
+                --itchio_button_shadow_color: #14b1e5;
+                background: url(fon.jpg) no-repeat fixed;
+                background-size: cover;
+            }
+            .inner_column {
+                color: #ffffff;
+                font-family: sans-serif, Lato, LatoExtended, sans-serif;
+                background-color: rgba(0, 0, 0, 1);
+            }
+            .inner_column ::selection {
+                color: white;
+                background: #009dd1;
+            }
+            .inner_column ::-moz-selection {
+                color: white;
+                background: #009dd1;
+            }
+            .inner_column h1,
+            .inner_column h2,
+            .inner_column h3,
+            .inner_column h4,
+            .inner_column h5,
+            .inner_column h6 {
+                font-family: inherit;
+                font-weight: bold;
+                color: inherit;
+            }
+            .inner_column a,
+            .inner_column .footer a {
+                color: #009dd1;
+            }
+            .inner_column .button,
+            .inner_column .button:hover,
+            .inner_column .button:active {
+                background-color: #009dd1;
+                color: white;
+                text-shadow: 0 1px 0px #14b1e5;
+            }
+            .inner_column hr {
+                background-color: #262626;
+            }
+            .inner_column table {
+                border-color: #262626;
+            }
+            .inner_column .redactor-box .redactor-toolbar li a {
+                color: #009dd1;
+            }
+            .inner_column .redactor-box .redactor-toolbar li a:hover,
+            .inner_column .redactor-box .redactor-toolbar li a:active,
+            .inner_column .redactor-box .redactor-toolbar li a.redactor-act {
+                background-color: #009dd1 !important;
+                color: white !important;
+                text-shadow: 0 1px 0px #14b1e5 !important;
+            }
+            .inner_column .redactor-box .redactor-toolbar .re-button-tooltip {
+                text-shadow: none;
+            }
+            .game_frame {
+                background: #191919; /*! */ /* */
+            }
+            .game_frame .embed_info {
+                background-color: rgba(0, 0, 0, 0.85);
+            }
+            .game_loading .loader_bar .loader_bar_slider {
+                background-color: #009dd1;
+            }
+            .view_game_page .reward_row,
+            .view_game_page .bundle_row {
+                border-color: #191919 !important;
+            }
+            .view_game_page .game_info_panel_widget {
+                background: rgba(25, 25, 25, 1);
+            }
+            .view_game_page .star_value .star_fill {
+                color: #009dd1;
+            }
+            .view_game_page .rewards .quantity_input {
+                background: rgba(25, 25, 25, 1);
+                border-color: rgba(255, 255, 255, 0.5);
+                color: #ffffff;
+            }
+            .view_game_page .right_col {
+                display: block;
+            }
+            .game_devlog_page li .meta_row .post_likes {
+                border-color: #191919;
+            }
+            .game_devlog_post_page .post_like_button {
+                box-shadow: inset 0 0 0 1px #262626;
+            }
+            .game_comments_widget .community_post .post_footer a,
+            .game_comments_widget .community_post .post_footer .vote_btn,
+            .game_comments_widget .community_post .post_header .post_date a,
+            .game_comments_widget .community_post .post_header .edit_message {
+                color: rgba(255, 255, 255, 0.5);
+            }
+            .game_comments_widget .community_post .reveal_full_post_btn {
+                background: linear-gradient(to bottom, transparent, #000000 50%, #000000);
+                color: #009dd1;
+            }
+            .game_comments_widget .community_post .post_votes {
+                border-color: rgba(255, 255, 255, 0.2);
+            }
+            .game_comments_widget .community_post .post_votes .vote_btn:hover {
+                background: rgba(255, 255, 255, 0.05);
+            }
+            .game_comments_widget .community_post .post_footer .vote_btn {
+                border-color: rgba(255, 255, 255, 0.5);
+            }
+            .game_comments_widget .community_post .post_footer .vote_btn span {
+                color: inherit;
+            }
+            .game_comments_widget .community_post .post_footer .vote_btn:hover,
+            .game_comments_widget .community_post .post_footer .vote_btn.voted {
+                background-color: #009dd1;
+                color: white;
+                text-shadow: 0 1px 0px #14b1e5;
+                border-color: #009dd1;
+            }
+            .game_comments_widget .form .redactor-box,
+            .game_comments_widget .form .click_input,
+            .game_comments_widget .form .forms_markdown_input_widget {
+                border-color: rgba(255, 255, 255, 0.5);
+                background: transparent;
+            }
+            .game_comments_widget .form .redactor-layer,
+            .game_comments_widget .form .redactor-toolbar,
+            .game_comments_widget .form .click_input,
+            .game_comments_widget .form .forms_markdown_input_widget {
+                background: rgba(25, 25, 25, 1);
+            }
+            .game_comments_widget .form .forms_markdown_input_widget .markdown_toolbar button {
+                color: inherit;
+                opacity: 0.6;
+            }
+            .game_comments_widget .form .forms_markdown_input_widget .markdown_toolbar button:hover,
+            .game_comments_widget .form .forms_markdown_input_widget .markdown_toolbar button:active {
+                opacity: 1;
+                background-color: #009dd1 !important;
+                color: white !important;
+                text-shadow: 0 1px 0px #14b1e5 !important;
+            }
+            .game_comments_widget .form .forms_markdown_input_widget .markdown_toolbar,
+            .game_comments_widget .form .forms_markdown_input_widget li {
+                border-color: rgba(255, 255, 255, 0.5);
+            }
+            .game_comments_widget .form textarea {
+                border-color: rgba(255, 255, 255, 0.5);
+                background: rgba(25, 25, 25, 1);
+                color: inherit;
+            }
+            .game_comments_widget .form .redactor-toolbar {
+                border-color: rgba(255, 255, 255, 0.5);
+            }
+            .game_comments_widget .hint {
+                color: rgba(255, 255, 255, 0.5);
+            }
+            .game_community_preview_widget .community_topic_row .topic_tag {
+                background-color: #191919;
+            }
+            .footer .svgicon,
+            .view_game_page .more_information_toggle .svgicon {
+                fill: #ffffff !important;
+            }
+        </style>
+    </head>
+    <body data-page_name="view_game" data-host="itch.io" class="locale_en game_layout responsive no_theme_toggle">
 
-				<hr>
-				<h2>Что нового в обновлении v 0 ?</h2>
-				<p>Вышло новое обновление с новыми функциями и улучшениями.</p>
-				<ul>
-					<li>-.</li>
 
-					<li>-.</li>
 
-					<li>- 
-						(-<code lang-rel="CODE"> - </code>)</li>
 
-					<li>- 
-						(-<code lang-rel="CODE"> P </code>)</li>
+        <div id="wrapper" class="main wrapper">
+            <div class="inner_column size_very_large family_sans-serif" id="inner_column">
+                <div id="view_game_page_150" class="view_game_page page_widget buy_on_top">
+                    <div class="header_buy_row">
+                        <p>A downloadable game for Windows</p>
+                        <div class="buy_row">
+                            <div class="button_message">
+                                <a href="#" class="button buy_btn">Download Now</a><span class="sub">Paradise</span></span>
+                            </div>
+                        </div>
+                                                 <div class="uploads">
+                                <div class="upload_list_widget">
+                                    <div class="upload">
+                                        <div class="info_column">
+                                            <div class="upload_name">
+                                                <strong title="hardcode-v0.7.6-win.zip" class="name">#-v#-win.zip</strong> <span class="file_size"><span># MB</span></span>
+                                                <span class="download_platforms"><span title="Download for Windows" class="icon icon-windows8"></span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="columns">
+                        <div class="left_col column">
+                            <div class="formatted_description user_formatted">
+                                <h2>INTRO</h2>
+                                <p>Paradise is a 3rd-person shooter</p>
+                                <h2>EXPLORATION</h2>
+                                <p>
+                                    You won&#x27;t be guided. You&#x27;ll have to learn the rules of this world by yourself and use it for your advantages or fail. At some moments, you may even think the game is broken. It just means that
+                                    you miss something and you need to keep looking.
+                                </p>
+                                <h2>ONLINE MULTIPLAYER</h2>
+                                <p>Current build of the game is not focused on multiplayer aspects. Future iterations will unlock more online gameplay elements.</p>
+                                <h2>STATE OF THE GAME</h2>
+                                <p>
+                                    This is a pre-alpha demo. It has been published to get early feedback on ideas and systems on which game is build on. The demo contains a small portion of content and features but it will grow over time.
+                                    Sounds, effects and characters meant to be replaced or improved in the future iterations.
+                                </p>
+                                <h3>System Requirements</h3>
+                                <p>The game has very low technical requirements, and you can run it on low level PCs.</p>
+                                <h3>Links</h3>
+                                <p>
+                                    <a href="#" rel="nofollow noopener">Website</a> | 
+                                    <a href="https://www.youtube.com/user/ProstoPlay" rel="nofollow noopener" target="_blank">YouTube</a>
+                                </p>
+                            </div>
+                            <section id="devlog" class="game_devlog">
+                                <h2>Development log</h2>
+                                <ul>
+                                    <li>
+                                        <a>v# - # &amp; Other Updates</a>
+                                        <div class="post_date">
+                                            </span> Sep 22, 2017</abbr>
+                                        </div>
+                                    </li>
 
-					<li>-.</li>
-
-				</ul>
-		</div>
-	</div>
-</div>
-<div class="footer">
-	<div class="content">
-		<p>v0.0.1 codename GEN © 2020.  ezzhii ( Леонид )</p>
-	</div>
-</div>
-</body>
-
+                                </ul>
+                            </section>
+                        </div>
+                        <div class="right_col column">
+                            <div class="screenshot_list">
+                                    <img
+                                        data-screenshot_id="803434"
+                                        srcset="https://avatars.mds.yandex.net/get-pdb/1926958/ad9644c6-6c23-4f30-9734-49bd783e5851/s1200"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
